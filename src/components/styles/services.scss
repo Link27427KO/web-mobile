@@ -1,0 +1,86 @@
+.services {
+  display: flex;
+  position: absolute;
+  margin-top: 95px;
+  width: 100%;
+  height: calc(100% - 95px);
+  background-color: rgba(218, 236, 255, 1);
+  &__leftSd {
+    width: 20%;
+    img {
+      float: left;
+      height: 100%;
+    }
+  }
+  &__middleSd {
+    width: 50%;
+
+    .List {
+      .isOpen {
+        border-radius: 15px 15px 0 0!important;
+      }
+      .isClose {
+        border-radius: 15px 15px 15px 15px!important;
+      }
+      .btnTodo {
+        border-radius: 15px 15px 15px 15px;
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 1);
+        .btnText {
+          span {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 175%;
+            color: #111111;
+          }
+        }
+        .colText {
+          span {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 175%;
+            color: #000000;
+          }
+        }
+      }
+      .contentTodo {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 0 0 15px 15px;
+        padding-bottom: 25px;
+      }
+    }
+
+    .circleGreen {
+      padding-left: 20px;
+      padding-right: 10px;
+      fill: green;
+    }
+
+    .circleBlue {
+      padding-left: 20px;
+      padding-right: 10px;
+      fill: rgba(103, 174, 252, 1);
+    }
+  }
+  &__rightSd {
+    width: 20%;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    img {
+      float: right;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+
+  .services {
+    display: flex;
+  }
+
+}

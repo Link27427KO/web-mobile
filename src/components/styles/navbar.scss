@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  position: absolute;
+  height: 95px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(103, 174, 252, 1);
+
+  &__cont {
+    display: flex;
+    div {
+      margin-left: 20px;
+    }
+  }
+
+  &__devs {
+    margin: auto;
+  }
+  &__services {
+    margin: auto;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__portfolio {
+    margin: auto;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__stages {
+    margin: auto;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__designers {
+    margin: auto;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__order {
+    margin: auto;
+    a {
+      background: rgba(117, 225, 105, 1);
+      color: white;
+      text-decoration: none;
+      outline: none;
+      box-shadow: none;
+      border-radius: 5px;
+      &:hover {
+        background: rgba(117, 225, 105, 1);
+        color: white;
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 5px;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+      }
+      &:active {
+        background: white;
+        color: rgba(103, 174, 252, 1);
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 5px;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .burger {
+    margin: auto;
+    button {
+      svg {
+        fill: white;
+      }
+    }
+  }
+  .container {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .navbar {
+    display: flex;
+  }
+
+}
