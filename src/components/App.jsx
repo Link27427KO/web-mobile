@@ -8,6 +8,7 @@ import Designers from "./designers/Designers";
 import Portfolio from "./portfolio/Portfolio";
 import Services from "./services/Services";
 import Stages from "./stages/Stages";
+import Footer from "./footer/Footer";
 import "./styles/_layout.scss"
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/order" element={<Order/>} />
           </Routes>
         </div>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

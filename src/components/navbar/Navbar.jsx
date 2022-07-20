@@ -33,7 +33,7 @@ const Navbar = () => {
                     <div className="navbar__portfolio"><NavLink to="/portfolio">Портфолио</NavLink></div>
                     <div className="navbar__stages"><NavLink to="/stages">Этапы</NavLink></div>
                     <div className="navbar__designers"><NavLink to="/designers">Дизайнеры</NavLink></div>
-                    <div className="navbar__order"><NavLink to="/order"><Button variant="contained" href="#contained-buttons">Заказать</Button></NavLink></div>
+                    <div className="navbar__order"><NavLink to="/order"><Button variant="contained" href="">Заказать</Button></NavLink></div>
                 </div>
                 <div className="burger">
                     <IconButton

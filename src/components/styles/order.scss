@@ -1,0 +1,111 @@
+.order {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: 95px;
+  width: 100%;
+  height: calc(100% - 95px);
+  background-color: rgba(218, 236, 255, 1);
+  &__leftSs {
+    img {
+      float: left;
+      width: 100%;
+      height: 90%;
+    }
+  }
+  &__middleSs {
+    margin-top: 50px;
+    width: auto;
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 125%;
+      text-align: center;
+      color: #111111;
+    }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 175%;
+      text-align: center;
+      color: #111111;
+    }
+    .formInputs {
+      padding: 5px;
+      .textF {
+        width: 450px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #6EB1FB;
+        border-radius: 10px;
+      }
+    }
+    .btn_trans {
+      margin-left: 150px;
+      margin-top: 20px;
+      a {
+        text-decoration: none;
+      }
+      button {
+        background: rgba(117, 225, 105, 1);
+        color: white;
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 5px;
+        &:hover {
+          background: rgba(117, 225, 105, 1);
+          color: white;
+          text-decoration: none;
+          outline: none;
+          box-shadow: none;
+          border-radius: 5px;
+          border: 2px solid #FFFFFF;
+          box-sizing: border-box;
+        }
+        &:active {
+          background: white;
+          color: rgba(103, 174, 252, 1);
+          text-decoration: none;
+          outline: none;
+          box-shadow: none;
+          border-radius: 5px;
+          border: 2px solid #FFFFFF;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+  &__rightSs {
+    img {
+      width: 100%;
+      height: 90%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .order {
+    display: flex;
+    flex-direction: column;
+    &__leftSs {
+      img {
+        width: 100%;
+        height: 400px;
+      }
+    }
+    &__middleSs {
+      height: 100%;
+    }
+    &__rightSs {
+      img {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}

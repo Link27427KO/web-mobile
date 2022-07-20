@@ -16,9 +16,29 @@ import RightSide from "./RightSideServices.png"
 const Services = () => {
 
     const [open, setOpen] = React.useState(false);
+    const [open1, setOpen1] = React.useState(false);
+    const [open2, setOpen2] = React.useState(false);
+    const [open3, setOpen3] = React.useState(false);
+    const [open4, setOpen4] = React.useState(false);
 
     const handleClick = () => {
         setOpen(!open);
+    };
+
+    const handleClick1 = () => {
+        setOpen1(!open1);
+    };
+
+    const handleClick2 = () => {
+        setOpen2(!open2);
+    };
+
+    const handleClick3 = () => {
+        setOpen3(!open3);
+    };
+
+    const handleClick4 = () => {
+        setOpen4(!open4);
     };
 
     // const posts = [
@@ -70,7 +90,7 @@ const Services = () => {
             </div>
             <div className="services__middleSd">
                 <List className="List"
-                      sx={{ width: '100%', marginTop: "120px" }}
+                      sx={{ width: '100%', marginTop: "20px" }}
                       component="div"
                       aria-labelledby="nested-list-subheader"
                       subheader={
@@ -83,7 +103,10 @@ const Services = () => {
                     {/*    {content}*/}
                     {/*</div>*/}
                         {
-                            open && <ListItemButton className="btnTodo isOpen" onClick={handleClick}>
+                            open && <ListItemButton className="btnTodo isOpen" onClick={() =>
+                            {
+                                handleClick()
+                            }}>
                                 <ListItemIcon>
                                     <CircleIcon className="circleBlue" />
                                 </ListItemIcon>
@@ -92,7 +115,10 @@ const Services = () => {
                             </ListItemButton>
                         }
                         {
-                            !open && <ListItemButton className="btnTodo isClose" onClick={handleClick}>
+                            !open && <ListItemButton className="btnTodo isClose" onClick={() =>
+                            {
+                                handleClick()
+                            }}>
                                 <ListItemIcon>
                                     <CircleIcon className="circleGreen" />
                                 </ListItemIcon>
@@ -100,133 +126,172 @@ const Services = () => {
                                 {open ? <ExpandLess /> : <ExpandMore />}
                             </ListItemButton>
                         }
-                        <Collapse className="contentTodo" in={open} timeout="auto" unmountOnExit>
+                        {
+                            open &&
+                            <Collapse className="contentTodo" in={open} timeout="auto" unmountOnExit>
+                                <List classes="List" sx={{
+                                    marginLeft: "6%",
+                                    borderLeft: "1px solid #000000",
+                                    height : "100%"
+                                }} component="div" disablePadding>
+                                    <ListItemButton sx={{ pl: 4 }}>
+                                        <ListItemText className="colText" primary="Дизайн портала — это оформление контента, совокупность всех графических элементов на веб-странице. Основная задача дизайна — познакомить пользователя со страницей. Продуманный дизайн создает нужное впечатление о компании." />
+                                    </ListItemButton>
+                                </List>
+                            </Collapse>
+                        }
+                    {
+                        open1 && <ListItemButton className="btnTodo isOpen" onClick={() =>
+                        {
+                            handleClick1()
+                        }}>
+                            <ListItemIcon>
+                                <CircleIcon className="circleBlue" />
+                            </ListItemIcon>
+                            <ListItemText className="btnText" primary="Дизайн адаптивной мобильной версии" />
+                            {open1 ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                    }
+                    {
+                        !open1 && <ListItemButton className="btnTodo isClose" onClick={() =>
+                        {
+                            handleClick1()
+                        }}>
+                            <ListItemIcon>
+                                <CircleIcon className="circleGreen" />
+                            </ListItemIcon>
+                            <ListItemText className="btnText" primary="Дизайн адаптивной мобильной версии" />
+                            {open1 ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                    }
+                    {
+                        open1 &&
+                        <Collapse className="contentTodo" in={open1} timeout="auto" unmountOnExit>
                             <List classes="List" sx={{
                                 marginLeft: "6%",
                                 borderLeft: "1px solid #000000",
                                 height : "100%"
                             }} component="div" disablePadding>
                                 <ListItemButton sx={{ pl: 4 }}>
-                                    <ListItemText className="colText" primary="Дизайн портала — это оформление контента, совокупность всех графических элементов на веб-странице. Основная задача дизайна — познакомить пользователя со страницей. Продуманный дизайн создает нужное впечатление о компании." />
+                                    <ListItemText className="colText" primary="Мобильная версия сайта удобна для пользователя, потому что сильно упрощена по сравнению с обычной версией. Мобильная версия дает наиболее приоритетную информацию, а также позволяет совершать заказ/покупку с минимумом действий. При адаптивной версии вся структура сайта автоматически подстраивается под различную ширину экрана. Для того, чтобы получить рабочий продукт не нужно писать все с нуля — достаточно лишь подправить CSS и HTML. Один URL избавляет нас от ненужных редиректов, и надобности пользователю запоминать адрес мобильной версии." />
                                 </ListItemButton>
                             </List>
                         </Collapse>
-                    {
-                        open && <ListItemButton className="btnTodo isOpen" onClick={handleClick}>
-                            <ListItemIcon>
-                                <CircleIcon className="circleBlue" />
-                            </ListItemIcon>
-                            <ListItemText className="btnText" primary="Дизайн адаптивной мобильной версии" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
-                        </ListItemButton>
                     }
                     {
-                        !open && <ListItemButton className="btnTodo isClose" onClick={handleClick}>
-                            <ListItemIcon>
-                                <CircleIcon className="circleGreen" />
-                            </ListItemIcon>
-                            <ListItemText className="btnText" primary="Дизайн адаптивной мобильной версии" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
-                        </ListItemButton>
-                    }
-                    <Collapse className="contentTodo" in={open} timeout="auto" unmountOnExit>
-                        <List classes="List" sx={{
-                            marginLeft: "6%",
-                            borderLeft: "1px solid #000000",
-                            height : "100%"
-                        }} component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }}>
-                                <ListItemText className="colText" primary="Мобильная версия сайта удобна для пользователя, потому что сильно упрощена по сравнению с обычной версией. Мобильная версия дает наиболее приоритетную информацию, а также позволяет совершать заказ/покупку с минимумом действий. При адаптивной версии вся структура сайта автоматически подстраивается под различную ширину экрана. Для того, чтобы получить рабочий продукт не нужно писать все с нуля — достаточно лишь подправить CSS и HTML. Один URL избавляет нас от ненужных редиректов, и надобности пользователю запоминать адрес мобильной версии." />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
-                    {
-                        open && <ListItemButton className="btnTodo isOpen" onClick={handleClick}>
+                        open2 && <ListItemButton className="btnTodo isOpen" onClick={() =>
+                        {
+                            handleClick2()
+                        }}>
                             <ListItemIcon>
                                 <CircleIcon className="circleBlue" />
                             </ListItemIcon>
                             <ListItemText className="btnText" primary="Дизайн десктопной версии" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
+                            {open2 ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
                     }
                     {
-                        !open && <ListItemButton className="btnTodo isClose" onClick={handleClick}>
+                        !open2 && <ListItemButton className="btnTodo isClose" onClick={() =>
+                        {
+                            handleClick2()
+                        }}>
                             <ListItemIcon>
                                 <CircleIcon className="circleGreen" />
                             </ListItemIcon>
                             <ListItemText className="btnText" primary="Дизайн десктопной версии" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
+                            {open2 ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
                     }
-                    <Collapse className="contentTodo" in={open} timeout="auto" unmountOnExit>
-                        <List classes="List" sx={{
-                            marginLeft: "6%",
-                            borderLeft: "1px solid #000000",
-                            height : "100%"
-                        }} component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }}>
-                                <ListItemText className="colText" primary="Десктопную версию сайта просматривают пользователи со стационарных компьютеров. Основная цель: посерфить, углубиться в детали, получить больше информации, сравнить, выбрать, прицениться." />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
                     {
-                        open && <ListItemButton className="btnTodo isOpen" onClick={handleClick}>
+                        open2 &&
+                        <Collapse className="contentTodo" in={open2} timeout="auto" unmountOnExit>
+                            <List classes="List" sx={{
+                                marginLeft: "6%",
+                                borderLeft: "1px solid #000000",
+                                height : "100%"
+                            }} component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemText className="colText" primary="Десктопную версию сайта просматривают пользователи со стационарных компьютеров. Основная цель: посерфить, углубиться в детали, получить больше информации, сравнить, выбрать, прицениться." />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    }
+                    {
+                        open3 && <ListItemButton className="btnTodo isOpen" onClick={() =>
+                        {
+                            handleClick3()
+                        }}>
                             <ListItemIcon>
                                 <CircleIcon className="circleBlue" />
                             </ListItemIcon>
                             <ListItemText className="btnText" primary="Пользовательский интерфейс" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
+                            {open3 ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
                     }
                     {
-                        !open && <ListItemButton className="btnTodo isClose" onClick={handleClick}>
+                        !open3 && <ListItemButton className="btnTodo isClose" onClick={() =>
+                        {
+                            handleClick3()
+                        }}>
                             <ListItemIcon>
                                 <CircleIcon className="circleGreen" />
                             </ListItemIcon>
                             <ListItemText className="btnText" primary="Пользовательский интерфейс" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
+                            {open3 ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
                     }
-                    <Collapse className="contentTodo" in={open} timeout="auto" unmountOnExit>
-                        <List classes="List" sx={{
-                            marginLeft: "6%",
-                            borderLeft: "1px solid #000000",
-                            height : "100%"
-                        }} component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }}>
-                                <ListItemText className="colText" primary="Цель дизайна пользовательского интерфейса - сделать взаимодействие максимально простым и эффективным, насколько это возможно, с точки зрения достижения целей пользователя. Хороший дизайн пользовательского интерфейса облегчает выполнение поставленной задачи, не привлекая к себе лишнего внимания." />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
                     {
-                        open && <ListItemButton className="btnTodo isOpen" onClick={handleClick}>
+                        open3 &&
+                        <Collapse className="contentTodo" in={open3} timeout="auto" unmountOnExit>
+                            <List classes="List" sx={{
+                                marginLeft: "6%",
+                                borderLeft: "1px solid #000000",
+                                height : "100%"
+                            }} component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemText className="colText" primary="Цель дизайна пользовательского интерфейса - сделать взаимодействие максимально простым и эффективным, насколько это возможно, с точки зрения достижения целей пользователя. Хороший дизайн пользовательского интерфейса облегчает выполнение поставленной задачи, не привлекая к себе лишнего внимания." />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    }
+                    {
+                        open4 && <ListItemButton className="btnTodo isOpen" onClick={() =>
+                        {
+                            handleClick4()
+                        }}>
                             <ListItemIcon>
                                 <CircleIcon className="circleBlue" />
                             </ListItemIcon>
                             <ListItemText className="btnText" primary="Микро UX" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
+                            {open4 ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
                     }
                     {
-                        !open && <ListItemButton className="btnTodo isClose" onClick={handleClick}>
+                        !open4 && <ListItemButton className="btnTodo isClose" onClick={() =>
+                        {
+                            handleClick4()
+                        }}>
                             <ListItemIcon>
                                 <CircleIcon className="circleGreen" />
                             </ListItemIcon>
                             <ListItemText className="btnText" primary="Микро UX" />
-                            {open ? <ExpandLess /> : <ExpandMore />}
+                            {open4 ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
                     }
-                    <Collapse className="contentTodo" in={open} timeout="auto" unmountOnExit>
-                        <List classes="List" sx={{
-                            marginLeft: "6%",
-                            borderLeft: "1px solid #000000",
-                            height : "100%"
-                        }} component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }}>
-                                <ListItemText className="colText" primary="Микро-анимация может изменить восприятие продукта, пользовательское поведение и повысить конверсию. Небольшие, преимущественно функциональные анимации поддерживают пользователя: обеспечивают визуальную обратную связь и более понятно отражают происходящие изменения. Микро-анимации способны многое объяснить без слов." />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
+                    {
+                        open4 &&
+                        <Collapse className="contentTodo" in={open4} timeout="auto" unmountOnExit>
+                            <List classes="List" sx={{
+                                marginLeft: "6%",
+                                borderLeft: "1px solid #000000",
+                                height : "100%"
+                            }} component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemText className="colText" primary="Микро-анимация может изменить восприятие продукта, пользовательское поведение и повысить конверсию. Небольшие, преимущественно функциональные анимации поддерживают пользователя: обеспечивают визуальную обратную связь и более понятно отражают происходящие изменения. Микро-анимации способны многое объяснить без слов." />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    }
                 </List>
             </div>
             <div className="services__rightSd">

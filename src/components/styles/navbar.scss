@@ -9,6 +9,7 @@
 
   &__cont {
     display: flex;
+    margin: auto;
     div {
       margin-left: 20px;
     }
@@ -48,6 +49,9 @@
   &__order {
     margin: auto;
     a {
+      text-decoration: none;
+    }
+    button {
       background: rgba(117, 225, 105, 1);
       color: white;
       text-decoration: none;
@@ -77,6 +81,7 @@
     }
   }
   .burger {
+    display: none;
     margin: auto;
     button {
       svg {
@@ -94,6 +99,14 @@
 
   .navbar {
     display: flex;
+    flex-direction: column;
+
+    &__cont {
+      display: none;
+    }
+    .burger {
+      display: inline;
+    }
   }
 
 }

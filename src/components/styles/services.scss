@@ -78,9 +78,17 @@
 }
 
 @media (max-width: 900px) {
-
   .services {
     display: flex;
+    flex-direction: column;
+    &__leftSd {
+      display: none;
+    }
+    &__middleSd {
+      height: 100%;
+    }
+    &__rightSd {
+      display: none;
+    }
   }
-
 }

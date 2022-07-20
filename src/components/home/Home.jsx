@@ -21,7 +21,7 @@ const Home = () => {
                     до пользовательского интерфейса в сжатые сроки
                     с командой Virtual Designers
                 </h2>
-                <NavLink to="/order"><Button variant="contained" href="#contained-buttons">Заказать</Button></NavLink>
+                <NavLink to="/order"><Button variant="contained" href="">Заказать</Button></NavLink>
             </div>
             <div className="home__rightSide">
                 <img src={RightSide} alt="" />
